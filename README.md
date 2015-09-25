@@ -1,3 +1,3 @@
 ## Status:
-01: fineshed
-02: going
+- 01: fineshed
+- 02: going
