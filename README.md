@@ -1,2 +1,3 @@
 ## Status:
-doing 02
+01: fineshed
+02: going
