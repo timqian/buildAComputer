@@ -1,3 +1,4 @@
 ## Status:
 - 01: fineshed
-- 02: ongoing
+- 02: finished
+- 03: on going
