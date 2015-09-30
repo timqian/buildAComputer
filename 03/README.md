@@ -42,3 +42,5 @@
 
 address[3..5]： 使用 DMux8Way 来决定load那个 RAM8， 使用 Mux8Way16 来决定读取那个 RAM8
 address[0..2]: 作为每一个RAM8的address
+
+### RAM512; RAM4K; RAM16K 原理与RAM64 类似
