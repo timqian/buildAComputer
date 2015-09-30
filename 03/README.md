@@ -44,3 +44,17 @@ address[3..5]： 使用 DMux8Way 来决定load那个 RAM8， 使用 Mux8Way16 �
 address[0..2]: 作为每一个RAM8的address
 
 ### RAM512; RAM4K; RAM16K 原理与RAM64 类似
+
+### PC:
+
+* A 16-bit counter with load and reset control bits.
+* if      (reset[t] == 1) out[t+1] = 0
+* else if (load[t] == 1)  out[t+1] = in[t] //load 位代表是否load输入在in上的数值
+* else if (inc[t] == 1)   out[t+1] = out[t] + 1  (integer addition)
+* else                    out[t+1] = out[t]
+
+- IN in[16], load, inc, reset;
+- OUT out[16];
+
+
+if else 类型的逻辑，使用 MUX 来实现; 后面的else逻辑，先MUX 

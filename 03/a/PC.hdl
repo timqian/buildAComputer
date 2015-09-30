@@ -12,10 +12,14 @@
  */
 
 CHIP PC {
-    IN in[16],load,inc,reset;
+    IN in[16], load, inc, reset; //
     OUT out[16];
 
     PARTS:
     // Put your code here:
-
+    Register(in = RIn, load = true, out = out, out = ROut); // 每个时钟周期，都load in上的值
+    Inc16(in = ROut, out= IncOut);
+    Mux16(a = ROut, b = IncOut, sel = inc, out = MOut1);
+    Mux16(a = MOut1, b = in, sel = load, out = MOut2);
+    Mux16(a = MOut2, b = false, sel = reset, out = RIn);
 }

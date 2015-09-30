@@ -2,6 +2,7 @@
 
 
 ## Status:
-- 01: fineshed
+- 01: finished
 - 02: finished
-- 03: on going
+- 03: finished
+- 04: onging
